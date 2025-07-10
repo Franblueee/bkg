@@ -1,0 +1,37 @@
+DAY 1
+
+- jaccard index
+
+Self-supervised learning on graphs:
+- instead of masking edges, can you mask nodes?
+- triplet loss
+    - margin is an hyperparameter: how far positives and negatives should be apart
+- "representation learning with contrastive predictive coding"  --> proof of infoNCE
+- how to generate negative samples??
+    - in a kg: a disease should not be a negative sample to another disease
+- logml_model.ipynb: nodes are initialized randomly. a possible way if improving it would be using some knowledge to initialize them. 
+
+----------------------------------------------------
+
+DAY 2:
+
+questions:
+    - during inference you are using a neighbour sampling. Thus, the embeddings of each node may change from one evaluation to another?
+        - yes, the correct way of doing it is to use the full graph. Since it does not fit in memory, people run inference with batch_size=1, and in cpu. 
+    - how are we generating negative samples?
+
+notes:
+- https://lhncbc.nlm.nih.gov/LHC-research/LHC-projects/NLP/MetaMapLite.html
+- recommendations:
+    - looking at the llama api and code
+    - looking at the medllm code
+
+
+------------------------------------------------------
+
+THINGS TO IMPROVE:
+- In fine-tunning: "Annotate medical questions with medical terms", she says we can improve that. 
+    --> this step boils down to extending the vocabulary of the model.
+    --> "something I would play with": the adapter. 
+    --> "something I didn't think about": the prompter
+    --> "one should try adding the codes at the beginning of the question"
