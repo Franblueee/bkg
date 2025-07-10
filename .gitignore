@@ -210,5 +210,8 @@ __marimo__/
 *.pt
 data/data_clean/*
 data/MMedBench/*
+data/logml_2025/*
 logml_2025/*
+/work/work_fran/bkg/data/graphsage_icd_embeds.*
+/work/work_fran/bkg/data/medqa_annot.*
 nohup.out
