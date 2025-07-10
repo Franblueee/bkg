@@ -208,6 +208,7 @@ __marimo__/
 
 *.zip
 *.pt
-data/*
+data/data_clean/*
+data/MMedBench/*
 logml_2025/*
 nohup.out
